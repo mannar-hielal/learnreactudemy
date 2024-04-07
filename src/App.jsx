@@ -4,7 +4,7 @@ import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton/TabButton";
 import { EXAMPLES, CORE_CONCEPTS } from "./data-with-examples";
 
-function App() {
+export default function App() {
   const [selectedTopic, setSelectedTopic] = useState();
 
   function handleClick(selectedButton) {
@@ -25,7 +25,7 @@ function App() {
     );
   }
   return (
-    <div>
+    <>
       <Header></Header>
       <main>
         <section id="core-concepts">
@@ -48,6 +48,6 @@ function App() {
           {tabContent}
         </section>
       </main>
-    </div>
+    </>
   );
 }
